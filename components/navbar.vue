@@ -7,7 +7,7 @@
 
         <div class="utils right">
             <a @click="isFULL = !isFULL" onClick="twPleinEcran();" id="monBouton" href="#" class=' alerts'><i :class="isFULL ? 'expand' : 'compress'" class="ui large black  icon"></i></a>
-            
+
         </div>
     </header>
     <!--//.header-dig-->
@@ -124,21 +124,21 @@ export default {
         -webkit-transition: 0.4s;
         -moz-transition: 0.4s;
     }
-    // .profile {
-    //     content: ' ';
-    //     height: 150px;
-    //     background: grey;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     // .content {
-    //     //     position: relative;
-    //     //     margin: auto;
-    //     //     justify-content: center;
-    //     //     text-align: center;
-    //     //     h3{
-    //     //       margin-top: 5px;
-    //     //     }
-    //     // }
+    .profile {
+        content: ' ';
+        height: 150px;
+        background: grey;
+        display: flex;
+        flex-wrap: wrap;
+        // .content {
+        //     position: relative;
+        //     margin: auto;
+        //     justify-content: center;
+        //     text-align: center;
+        //     h3{
+        //       margin-top: 5px;
+        //     }
+        // }
 
     }
     .p2 {
