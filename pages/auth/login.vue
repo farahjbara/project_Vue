@@ -20,15 +20,15 @@
             </ul>
         </div>
         enderror -->
-        <form class="ui form" method="POST" action="">
+        <form class="ui form" method="post" @submit.prevent="login">
 
             <div class="field">
                 <label>Votre email</label>
-                <input type="text" name="email" value="" required autocomplete="email" autofocus placeholder="saisissez votre adress e-mail">
+                <input type="text" v-model="email" name="email" value="" required autocomplete="email" autofocus placeholder="saisissez votre adress e-mail">
             </div>
             <div class="field">
                 <label>Mot de passe</label>
-                <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="*******">
+                <input id="password" v-model="password" type="password" name="password" required autocomplete="current-password" placeholder="*******">
             </div>
             <button class="ui button black fluid" style="color:white" type="submit">se connecter</button>
             <div class="ui divider hiden">
@@ -42,8 +42,31 @@
 
 <script>
 export default {
-layout : 'auth',
-}
+  data() {
+     return {
+       email: '',
+       password: '',
+       error: null
+     }
+   },
+
+   methods: {
+     async login() {
+       try {
+         await this.$auth.loginWith('local', {
+           data: {
+             email: this.email,
+             password: this.password
+           }
+         })
+
+         this.$router.push('/')
+       } catch (e) {
+         this.error = e.response.data.message
+       }
+     }
+   }
+ }
 </script>
 
 <style lang="css" scoped>

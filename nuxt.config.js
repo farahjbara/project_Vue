@@ -9,7 +9,7 @@ export default {
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
-  target: 'static',
+  target: 'server',
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -58,6 +58,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/auth'
     // Doc: https://github.com/nuxt/content
   //  '@nuxt/content',
   ],
@@ -66,9 +67,20 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://localhost'
+  baseURL: 'http://127.0.0.1:8000/api'
+},
 
-  },
+auth: {
+  strategies: {
+    local: {
+      endpoints: {
+        login: { url: 'login_check', method: 'post', propertyName: 'data.token' },
+        user: { url: 'users', method: 'get', propertyName: 'data' },
+        logout: false
+      }
+    }
+  }
+},
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration

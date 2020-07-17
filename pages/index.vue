@@ -1,13 +1,28 @@
 <template>
-  <div class="q-mt-xl q-mx-md bg-gery-8">
-    test
-  </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="title">My Profile</h2>
+      <div class="content">
+        <p>
+          <strong>Username:</strong>
+          {{ loggedInUser.name }}
+        </p>
+        <p>
+          <strong>Email:</strong>
+          {{ loggedInUser.email }}
+        </p>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  middleware: 'auth',
+  computed: {
+    ...mapGetters(['loggedInUser'])
+  }
 }
 </script>
-
-<style lang="css" scoped>
-</style>
