@@ -42,7 +42,7 @@
 
 <script>
 export default {
-layout : 'aut',
+layout : 'auth',
 }
 </script>
 
