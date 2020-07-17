@@ -67,15 +67,23 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-  baseURL: 'http://127.0.0.1:8000/api'
+  baseURL: 'https://127.0.0.1:8000/api'
 },
 
 auth: {
+  localStorage: true,
+  cookie: {
+  prefix: 'auth.',
+  options: {
+    path: '/',
+    maxAge: 10800
+  }
+},
   strategies: {
     local: {
       endpoints: {
-        login: { url: 'login_check', method: 'post', propertyName: 'data.token' },
-        user: { url: 'users', method: 'get', propertyName: 'data' },
+        login: { url: 'login_check', method: 'POST', propertyName: 'data.token' },
+        user: { url: 'users', method: 'GET', propertyName: 'data' },
         logout: false
       }
     }
