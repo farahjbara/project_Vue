@@ -58,7 +58,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/auth'
+    'cookie-universal-nuxt'
+  //  '@nuxtjs/auth'
     // Doc: https://github.com/nuxt/content
   //  '@nuxt/content',
   ],
@@ -70,25 +71,7 @@ export default {
   baseURL: 'https://127.0.0.1:8000/api'
 },
 
-auth: {
-  localStorage: true,
-  cookie: {
-  prefix: 'auth.',
-  options: {
-    path: '/',
-    maxAge: 10800
-  }
-},
-  strategies: {
-    local: {
-      endpoints: {
-        login: { url: 'login_check', method: 'POST', propertyName: 'data.token' },
-        user: { url: 'users', method: 'GET', propertyName: 'data' },
-        logout: false
-      }
-    }
-  }
-},
+
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration

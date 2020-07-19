@@ -4,11 +4,15 @@
         <div class="left">
             <button @click="isOn = !isOn" id="menul" title="Menu"><i :class="isOn ? 'close' : 'bars'" class="ui large black icon"></i></button>
         </div>
+        <div class="utils right">
+            <a aria-label="logout" @click='logout' id="" href="#" class=''><i class="ui large black sign-out  icon"></i></a>
 
+        </div>
         <div class="utils right">
             <a @click="isFULL = !isFULL" onClick="twPleinEcran();" id="monBouton" href="#" class=' alerts'><i :class="isFULL ? 'expand' : 'compress'" class="ui large black  icon"></i></a>
 
         </div>
+
     </header>
     <!--//.header-dig-->
     <div :class="isOn ? 'active' : ''" id="sideBar">
@@ -62,21 +66,14 @@ export default {
             users:{}
         }
     },
-    // methods: {
-    //     getUser() {
-    //         axios.get('/gr')
-    //             .then((response) => {
-    //                 this.users = response.data;
-    //                 console.log(this.users)
-    //             })
-    //             .catch((e) => {
-    //                 console.log(e)
-    //             })
-    //     }
-    // },
-    // created() {
-    //     this.getUser()
-    // }
+    methods: {
+      logout() {
+          this.$cookies.remove('_token')
+          this.$cookies.remove('_email')
+          this.$router.push('/login')
+
+    }
+  }
 
 }
 </script>

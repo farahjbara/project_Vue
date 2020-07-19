@@ -1,28 +1,16 @@
+
 <template>
-  <section class="section">
-    <div class="container">
-      <h2 class="title">My Profile</h2>
-      <div class="content">
-        <p>
-          <strong>Username:</strong>
-          {{ loggedInUser.name }}
-        </p>
-        <p>
-          <strong>Email:</strong>
-          {{ loggedInUser.email }}
-        </p>
-      </div>
-    </div>
-  </section>
+
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
-export default {
-  middleware: 'auth',
-  computed: {
-    ...mapGetters(['loggedInUser'])
-  }
-}
+   export default {
+       name: "index",
+     mounted(){
+         this.$router.push('/home')
+     }
+   }
 </script>
+
+<style scoped>
+</style>

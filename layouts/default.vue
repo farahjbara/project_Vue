@@ -1,13 +1,15 @@
 <template >
   <div class="">
      <Nbvar/>
-      <nuxt />
+     <div class="q-mt-xl q-px-md" style="margin-top:100px">
+       <nuxt />
+     </div>
       <Dfooter/>
   </div>
 </template>
 
 <script>
-import Nbvar from '~/components/navbar.vue'
+import Nbvar from '~/components/navbarv.vue'
 import Dfooter from '~/components/footer.vue'
 export default {
   components : {

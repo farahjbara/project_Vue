@@ -1,8 +1,19 @@
 <template >
   <div class="ft">
-      2020 -created by <strong>FARAH</strong>
+    <div class="ui vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui section divider"></div>
+        <div class="ui horizontal small divided link list">
+          <span class="center txt-footer">
+		  Gestion des conges | Made With <i class="heart red icon"></i>
+     By
+     <a href="#" target="_blank" class="positive ui mini">farha</a>
+   © 2020-2021
+   </span>
+ </div>
+</div>
+</div>
   </div>
-
 </template>
 
 <script>
@@ -14,7 +25,9 @@ export default {
 .ft{
   text-align: center;
   justify-content: center;
+  position: absolute;
   bottom: 0;
-  top: auto;
+  width: 100%;
+  height: 2.5rem;
 }
 </style>

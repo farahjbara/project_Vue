@@ -1,8 +1,11 @@
- 
 <template >
   <div class="">
-     
+     <div class="q-mt-sm q-px-md">
       <nuxt />
+    </div>
+    <div class="ui divider hidden">
+
+    </div>
       <Dfooter/>
   </div>
 </template>
