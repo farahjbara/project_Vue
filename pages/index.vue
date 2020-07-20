@@ -7,7 +7,7 @@
    export default {
        name: "index",
      mounted(){
-         this.$router.push('/home')
+         this.$router.push('rh/')
      }
    }
 </script>

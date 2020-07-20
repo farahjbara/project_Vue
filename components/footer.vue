@@ -1,5 +1,4 @@
 <template >
-  <div class="ft">
     <div class="ui vertical footer segment">
       <div class="ui center aligned container">
         <div class="ui section divider"></div>
@@ -13,7 +12,6 @@
  </div>
 </div>
 </div>
-  </div>
 </template>
 
 <script>
@@ -25,8 +23,6 @@ export default {
 .ft{
   text-align: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 2.5rem;
 }

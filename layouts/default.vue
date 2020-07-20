@@ -1,8 +1,10 @@
 <template >
   <div class="">
      <Nbvar/>
-     <div class="q-mt-xl q-px-md" style="margin-top:100px">
+     <div class="pusher" style="margin-top: 60px; ;margin-left:10px;">
+        <div class="main-content">
        <nuxt />
+     </div>
      </div>
       <Dfooter/>
   </div>

@@ -26,14 +26,14 @@
             <div class="ui divider hiden">
 
             </div>
-            <a class="ui link aligned center ">Mot de passe oublié?</a>
+
         </form>
     </div>
 </div>
 </template>
 
 <script>
-import axios from 'axios'
+
 export default {
   layout: 'auth',
     middleware: 'checkAuth',
@@ -43,30 +43,44 @@ export default {
           password: '',
           errors:'',
            token: '',
+           role:'',
            islod : false
+
       }
     },
     methods: {
-      login(){
+      login() {
         this.islod = true;
-        axios.post('https://127.0.0.1:8000/api/login_check',{
+        this.$axios.post('login_check',{
           email: this.email,
           password: this.password,
         }).then(response => {
           this.token = response.data.token;
           this.$store.commit('SET_AUTH_DATA', {token: response.data.token, email: this.email});
           this.islod = false;
-          this.$router.push('home')
+           this.$axios.get('/init').then(response => {
+           this.users = response.data.find(user => user.email === this.email);
+           this.$store.commit('SET_ID_USER', {id: this.users.id});
+
+            this.roles =  this.users.roles;
+            if (this.roles.indexOf('ROLE_RH')!=-1) {
+            this.$store.commit('SET_ROLE_USER', {role:'RH'});
+            this.$router.push('/admin')
+          }else {
+              this.$store.commit('SET_ROLE_USER', {role:'Salarié'});
+              this.$router.push('salarie/welcome')
+            }
+            }).catch(error => {
+              console.log(error);
+              this.errors = error.response.data.message
+              });
         }).catch(error => {
           this.islod = false;
           console.log(error);
           this.errors = error.response.data.message
         });
-      },
-
-      mounted() {
       }
-    },
+    }
   }
 </script>
 

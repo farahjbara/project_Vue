@@ -27,8 +27,7 @@ export default {
     ],
     script: [
         { src:'/jquery.min.js' },
-        { src:'/semantic.min.js' },
-       { src:'/script.js' },
+        { src:'/semantic.min.js' }
     ]
   },
   /*
@@ -43,8 +42,11 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-  //  { src: '~plugins/v-calendar.js', ssr: false }
+   { src: '~plugins/v-calendar', ssr: false }
   ],
+  router : {
+    linkActiveClass : 'active'
+  },
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
@@ -88,5 +90,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  server: {
+
   }
 }
