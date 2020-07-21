@@ -57,6 +57,10 @@
               <i class="ui icon user"></i>
               Profile
           </nuxt-link>
+          <nuxt-link to="/admin/users" class="item">
+              <i class="ui icon users"></i>
+              Liste des utilisateurs
+          </nuxt-link >
           <nuxt-link to="/admin/demandes" class="item">
               <i class="ui icon clipboard list add"></i>
               Liste des demandes
