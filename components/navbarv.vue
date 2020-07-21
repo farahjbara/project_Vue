@@ -98,9 +98,14 @@
                <i class="user icon"></i>
                {{users.email}}
                </h5>
-             <a href="" class="item">
-               <i class="info circle icon"></i>
-               Profile</a>
+               <nuxt-link to="/admin/profile" class="item" v-if="this.roles=='RH'">
+                   <i class="ui icon user"></i>
+                   Profile
+               </nuxt-link>
+               <nuxt-link to="/salarie/profile" class="item" v-if="this.roles=='Salarié'">
+                   <i class="ui icon user"></i>
+                   Profile
+               </nuxt-link>
              <a href="" class="item" @click="logout">
                <i class="sign-out icon"></i>
                Déconnexion

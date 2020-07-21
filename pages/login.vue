@@ -65,10 +65,10 @@ export default {
             this.roles =  this.users.roles;
             if (this.roles.indexOf('ROLE_RH')!=-1) {
             this.$store.commit('SET_ROLE_USER', {role:'RH'});
-            this.$router.push('/admin')
+            this.$router.push('/admin#')
           }else {
               this.$store.commit('SET_ROLE_USER', {role:'Salarié'});
-              this.$router.push('salarie/welcome')
+              this.$router.push('/salarie#')
             }
             }).catch(error => {
               console.log(error);
