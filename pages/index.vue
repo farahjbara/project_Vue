@@ -6,8 +6,13 @@
 <script>
    export default {
        name: "index",
+       middleware : 'auth',
      mounted(){
-         this.$router.push('rh/')
+         if (this.$cookies.get('_role')==="RH") {
+         this.$router.push('/admin#')
+       } else {
+         this.$router.push('/salarie#')
+       }
      }
    }
 </script>

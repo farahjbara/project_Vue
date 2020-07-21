@@ -21,7 +21,8 @@
     "nuxt": "^2.13.0",
     "nuxt-buefy": "^0.3.31",
     "sass-loader": "^9.0.2",
-    "v-calendar": "^1.0.8"
+    "v-calendar": "^1.0.8",
+    "vue-stepper": "^1.4.2"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.3",

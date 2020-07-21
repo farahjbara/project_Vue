@@ -9,13 +9,14 @@
 <div class="ui segment">
   <table class="ui celled table loading">
   <thead>
-    <tr><th>ID</th>
+    <tr>
+    <th>ID</th>
     <th>Date Demandé</th>
     <th>Date Début</th>
     <th>Date fin</th>
     <th>type absence</th>
     <th>status</th>
-    <th></th>
+      <th>vérifier</th>
   </tr></thead>
   <tbody>
     <tr v-for="demande in demandes"  :key="demande.id">
@@ -24,8 +25,8 @@
       <td >{{demande.dateDebut.slice(0, demande.dateDebut.indexOf('T'))}}</td>
       <td >{{demande.dateFin.slice(0, demande.dateFin.indexOf('T'))}}</td>
       <td >{{demande.typeConge}}</td>
-      <td >{{demande.etat}} <i class="spinner green loading icon"/></td>
-      <td style="margin:auto">  <nuxt-link :to="'/admin/checkdemande/conges/'+ demande.id" class="item link" ><i class="ui icon eye black big "/></nuxt-link></td>
+      <td >{{demande.etat}}</td>
+      <td style="margin:auto">  <nuxt-link :to="'/admin/checkdemande/conges/'+ demande.id" class="item link" ><i class="ui icon edit black meduim "/></nuxt-link></td>
     </tr>
   </tbody>
 </table>

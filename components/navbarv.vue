@@ -14,7 +14,7 @@
     </div>
     <br>
       <div  class="ui secondary p2 massive vertical fluid menu" v-if="this.roles=='Salarié'">
-          <nuxt-link to="/salarie/welcome" class="item">
+          <nuxt-link to="/salarie#" class="item">
               <i class="ui icon home"></i>
               Home
           </nuxt-link >
@@ -37,7 +37,7 @@
             </div>
             <div class="menu">
             <nuxt-link to="/salarie/setdemande" class="item">
-                <i class="ui icon bed"></i>
+                <i class="ui icon stopwatch"></i>
                 Conges
             </nuxt-link>
             <nuxt-link to="/salarie/setpermi" class="item">
@@ -65,22 +65,11 @@
               <i class="ui icon calendar"></i>
               Calendrier
           </nuxt-link >
-           <div class="item balck">
-               <i class="ui icon circle"></i>
-            <div class="header balck">
-              Demande :
-            </div>
-            <div class="menu">
-            <nuxt-link to="/admin/setdemande" class="item">
-                <i class="ui icon bed"></i>
-                Conges
-            </nuxt-link>
-            <nuxt-link to="/admin/setpermi" class="item">
-                <i class="ui icon stopwatch"></i>
-                Permissions
-            </nuxt-link>
-          </div>
-          </div>
+          <nuxt-link to="/admin/project" class="item">
+              <i class="ui icon suitcase"></i>
+              Liste des Project
+          </nuxt-link>
+
 
       </div>
      </div>

@@ -8,11 +8,11 @@
         {{errors.detail}}
       </div>
     </div>
-      <div class="segment ui success message" v-else-if="tmp" >
+
         <div class="ui headers">
-          La demande est envoyée
+        <i class="ui icon user"></i>  Mon Profile
         </div>
-    </div>
+    
     <div class="ui segment padded">
       <form disabled class="ui form segment" method="POST" >
   <div class="two fields">

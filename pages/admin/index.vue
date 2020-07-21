@@ -29,7 +29,7 @@
              </div>
              <div class="extra content">
                <div class="ui two buttons">
-                 <div class="ui red button">PLUS</div>
+                 <nuxt-link to="/admin/users" class="ui red button">PLUS</nuxt-link>
                </div>
              </div>
            </div>
@@ -54,7 +54,7 @@
              </div>
              <div class="extra content">
                <div class="ui two buttons">
-                 <div class="ui green button">PLUS</div>
+                <nuxt-link to="/admin/demandes" class="ui green button">PLUS</nuxt-link>
                </div>
              </div>
            </div>
@@ -76,7 +76,7 @@
              </div>
              <div class="extra content">
                <div class="ui two buttons">
-                 <div class="ui teal button">PLUS</div>
+                 <nuxt-link to="/admin/demandes" class="ui teal button">PLUS</nuxt-link>
                </div>
              </div>
            </div>
@@ -87,20 +87,20 @@
            <div class="ui fluid card">
              <div class="content">
                <div class="ui right floated header purple">
-                 <i class="icon calculator"></i>
+                 <i class="icon suitcase"></i>
                </div>
                <div class="header">
-                 <h4 class="ui purple header"><i class="icon tiny dollar"></i></h4>
+                 <h4 class="ui purple header">0</i></h4>
                </div>
                <div class="meta">
-                 SOLDE
+                 PROJET
                </div>
                <div class="description">
                </div>
              </div>
              <div class="extra content">
                <div class="ui two buttons">
-                 <div class="ui purple button">PLUS</div>
+                 <nuxt-link to="/admin/project" class="ui purple button">PLUS</nuxt-link>
                </div>
              </div>
            </div>
@@ -130,7 +130,6 @@ export default {
     this.$axios.get('/users').then(response => {
       this.users = response.data ;
       }).catch(error => {
-
         this.error = error.response.data
         console.log(this.error);
       });

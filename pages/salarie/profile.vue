@@ -13,6 +13,9 @@
           La demande est envoyée
         </div>
     </div>
+    <div class="ui headers">
+    <i class="ui icon user"></i>  Mon Profile
+    </div>
     <div class="ui segment padded">
       <form disabled class="ui form segment" method="POST" >
   <div class="two fields">

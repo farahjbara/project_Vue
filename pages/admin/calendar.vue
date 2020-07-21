@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <h3 class="ui header">Calendrier</h3>
-    <div class="ui segment">
+    <div class="ui segment" style="margin:auto">
       <div
         id="single-date-picker"
         class="single-date-picker__calendar-view"

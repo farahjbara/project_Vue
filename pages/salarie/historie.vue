@@ -23,7 +23,7 @@
       <td >{{demande.dateDebut.slice(0, demande.dateDebut.indexOf('T'))}}</td>
       <td >{{demande.dateFin.slice(0, demande.dateFin.indexOf('T'))}}</td>
       <td >{{demande.typeConge}}</td>
-      <td >{{demande.etat}} <i class="spinner green loading icon"/></td>
+      <td >{{demande.etat}} </td>
     </tr>
   </tbody>
 </table>
