@@ -96,7 +96,7 @@ export default {
             this.errors='';
           this.tmp = response.data;
           this.getDemande();
-          console.log(this.tmp);
+      
           this.islod = false;
         }).catch(error => {
           this.errors='';
