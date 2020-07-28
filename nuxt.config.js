@@ -1,5 +1,6 @@
 
 export default {
+
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -65,13 +66,13 @@ export default {
     //'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    //'@nuxtjs/pwa',
     'cookie-universal-nuxt'
   //  '@nuxtjs/auth'
     // Doc: https://github.com/nuxt/content
   //  '@nuxt/content',
   ],
-  /*
+  /* 
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */

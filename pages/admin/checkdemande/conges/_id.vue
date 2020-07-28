@@ -53,11 +53,11 @@
   </thead>
     <tbody>
       <tr>
-        <td >{{nodata}}</td>
-        <td >{{nodata}}</td>
-        <td >{{nodata}}</td>
-        <td >{{nodata}}</td>
-        <td >{{nodata}}</td>
+        <td >{{demandes.dateDebut}}</td>
+        <td >2020</td>
+        <td >{{user.nbrJrsRestant}}</td>
+        <td >{{user.nbrJrsPris}}</td>
+        <td >{{user.soldeAnnuel}}</td>
       </tr>
     </tbody>
   </table>
@@ -145,7 +145,7 @@ export default {
     },
       getUser(){
         this.$axios.get('/users/'+ this.id_user).then(response => {
-          this.user = response.data.find(user => user.email === this.$cookies.get('_email'));
+          this.user = response.data.find(user => user.id == '1')
           console.log(this.user);
           }).catch(error => {
             console.log(error);
