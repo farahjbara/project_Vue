@@ -80,7 +80,7 @@ export default {
   baseURL: 'https://127.0.0.1:8000/api'
 },
 
-
+   
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
