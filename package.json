@@ -12,7 +12,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@lossendae/vue-table": "^0.1.8",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "buefy": "^0.8.20",
     "bulma": "^0.9.0",
     "chart.js": "^2.9.3",
